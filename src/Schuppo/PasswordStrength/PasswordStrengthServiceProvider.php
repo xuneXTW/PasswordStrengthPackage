@@ -5,6 +5,7 @@ namespace Schuppo\PasswordStrength;
 use Illuminate\Contracts\Validation\Factory;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Translation\Translator;
+use Illuminate\Support\Str;
 
 class PasswordStrengthServiceProvider extends ServiceProvider
 {
