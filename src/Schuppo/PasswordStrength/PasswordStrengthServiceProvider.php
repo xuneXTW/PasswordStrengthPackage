@@ -36,7 +36,7 @@ class PasswordStrengthServiceProvider extends ServiceProvider
         $translator = app('passwordStrength.translationProvider')->get($validator);
 
         foreach(['letters', 'numbers', 'caseDiff', 'symbols'] as $rule) {
-            $snakeCasedRule = \Str::snake($rule);
+            $snakeCasedRule = Str::snake($rule);
 
             $validator->extend($rule, function ($_, $value, $__) use ($passwordStrength, $rule) {
                 $capitalizedRule = ucfirst($rule);
